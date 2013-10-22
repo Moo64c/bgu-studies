@@ -1,0 +1,547 @@
+.node-type-video {
+
+
+  .pane-entity-view {
+
+    .top-wrapper {
+
+      .score {
+        float: left; // LTR
+      }
+
+      .votes {
+        float: right; // LTR
+      }
+    }
+  }
+
+  #main-content {
+    width: auto;
+
+    .panel-2col {
+
+      .panel-col-first {
+        margin-right: 15px;
+        width: 620px;
+
+        .pane-video-display {
+
+          .panel-separator {
+            margin-bottom: 5px;
+          }
+
+          .panel-pane {
+            box-shadow: 0 0;
+            padding: 0px;
+            float: left; //LTR
+            clear: left; //LTR
+
+            &.pane-node-title-field {
+              @include franklin;
+              color: #0f0f0f;
+              font-size: 28px;
+              font-weight: bold;
+            }
+
+            &.pane-node-field-subtitle {
+              float: left; //LTR
+              font-size: 18px;
+              @include franklin;
+              color: #6c6c6c;
+            }
+
+            &.pane-service-links {
+              float: left; //LTR
+              clear: left; //LTR
+              margin: 12px 0px 9px;
+
+              &.static-links {
+                float: right; //LTR
+                clear: none;
+                margin: 10px 0 0;
+
+                ul {
+                  margin: 0;
+
+                  li {
+                    float: left; //LTR
+                    margin: 0 3px 0 0; //LTR
+
+                    a {
+                      display: inline-block;
+                      width: 16px;
+                      height: 16px;
+                      background: url('../images/sprites.png') no-repeat;
+
+                      &.facebook {
+                        background-position: 0 -50px;
+                      }
+
+                      &.email {
+                        background-position: -64px -50px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .service-links {
+
+                ul {
+                  list-style-type: none;
+                  margin: 0px;
+                  padding: 0px;
+
+                  li {
+                    display: block;
+                    float: left; //LTR
+
+                    &.service-links-facebook-like iframe {
+                      width: 91px !important;
+                    }
+
+                    &.service-links-twitter-widget iframe {
+                      width: 90px !important;
+                    }
+
+                    &.service-links-pinterest-button {
+                      width: 54px !important;
+                    }
+
+                    &.service-links-google-plus-one div {
+                      width: 93px !important;
+                    }
+                  }
+                }
+              }
+            }
+
+            &.pane-related-videos {
+
+              li {
+                float: left; //LTR
+                position: relative;
+                margin: 0 70px 0 0; //LTR
+                width: 153px;
+
+                &.last {
+                  margin: 0;
+                }
+
+                a {
+                  display: block;
+
+                  &:hover::after {
+                    content: url("../images/hover-play.png");
+                    padding-top: 30px;
+                    padding-left: 65px;
+                    background: rgba(27, 27, 27, 0.7);
+                    width: 88px;
+                    height: 55px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                  }
+
+                  .category {
+                    position: absolute;
+                    padding: 0 7px;
+                    max-width: 136px;
+                    height: 18px;
+                    line-height: 20px;
+                    top: 65px;
+                    left: 0px; // LTR
+                    background-color: #070707;
+                    color: white;
+                    font-size: 10px;
+                  }
+
+                  .title {
+                    font-size: 14px;
+                    font-weight: normal;
+                  }
+                }
+              }
+            }
+
+            &.pane-node-field-description {
+              border-bottom: 1px dotted #e3e3e3;
+            }
+
+            &.subscribe {
+
+              p {
+                margin: 10px 0 0;
+              }
+
+              .subscribe {
+                color: #60797d;
+                font-size: 12px;
+
+                &:before {
+                  display: inline-block;
+                  content: '';
+                  width: 16px;
+                  height: 16px;
+                  background: url('../images/sprites.png') no-repeat -350px -50px;
+                  margin-right: 10px; //LTR
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+
+        .pane-comments .comment {
+          .vud-widget {
+            position: relative;
+            margin: 0;
+
+            .up-score {
+              float: left; // LTR
+
+              .up-inactive {
+                background: url('../images/sprites.png') no-repeat -115px -1px;
+                width: 15px;
+                height: 14px;
+                float: left; // LTR
+                margin-left: 3px; // LTR
+                margin-right: 7px; // LTR
+              }
+
+              .up-active, a:hover .up-inactive {
+                background: url('../images/sprites.png') no-repeat -115px -19px;
+                width: 15px;
+                height: 14px;
+                float: left; // LTR
+                margin-left: 3px; // LTR
+                margin-right: 7px; // LTR
+              }
+
+              .up-current-score {
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                color: #ababab;
+                float: left; // LTR
+                font-size: 13px;
+              }
+            }
+
+            .score-sep {
+              float: left; // LTR
+              border-left: 1px dotted #cdcdcd;
+              width: 1px;
+              height: 11px;
+              margin-top: 3px;
+            }
+
+            .down-score {
+              float: left; // LTR
+
+              .down-inactive {
+                background: url('../images/sprites.png') no-repeat -101px -4px;
+                width: 15px;
+                height: 14px;
+                float: left; // LTR
+                margin: 4px 0 0 3px; // LTR
+              }
+
+              .down-active, a:hover .down-inactive {
+                background: url('../images/sprites.png') no-repeat -101px -23px;
+                width: 15px;
+                height: 14px;
+                float: left; // LTR
+                margin: 4px 0 0 3px; // LTR
+              }
+
+              .down-current-score {
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                color: #ababab;
+                float: left; // LTR
+                font-size: 13px;
+                margin-left: 7px; // LTR
+              }
+            }
+
+            .vud-link-reset {
+              display: none;
+            }
+
+            .ajax-progress-throbber {
+              position: absolute;
+              top: 12px;
+              left: 0;
+              margin: 0;
+              padding: 0;
+            }
+          }
+
+          .links li a {
+            color: #7B7B7B;
+            font-size: 13px;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      .panel-col-last {
+        margin-left: 15px; //LTR
+        width: 300px;
+        float: right; //LTR
+
+        .inside {
+          margin: 0;
+        }
+
+        .pane-entity-view {
+
+          .top-wrapper {
+            position: relative;
+
+            .score {
+              background: #f4f4f4;
+              border: 1px solid #dadada;
+              @include rounded-corners(6px, 6px, 6px, 6px);
+              width: 105px;
+              height: 91px;
+              padding-top: 1px;
+              color: #777777;
+              font-size: 13px;
+              text-align: center;
+
+              .score-number {
+                color: #c10000;
+                font-size: 64px;
+                font-weight: bold;
+                margin: 0px 0px -3px 0px; //LTR
+              }
+
+              .rank-number {
+                font-weight: bold;
+              }
+
+              a {
+                color: #777777;
+              }
+            }
+
+            .votes {
+              position: absolute;
+              left: 115px; //LTR
+              top: 0px;
+              z-index: 1001;
+
+              & > div {
+                border: 1px solid #dadada;
+                @include rounded-corners(6px, 0px, 0px, 6px); //LTR
+                background-color: #fbfbfb;
+                width: 178px;
+                float: left; //LTR
+                padding-left: 9px; //LTR
+
+                .title {
+                  float: left; //LTR
+                  color: #777777;
+                  font-size: 13px;
+                  margin-top: 1px;
+
+                  .voters {
+                    color: #00437a;
+                    font-size: 11px;
+                  }
+
+                  .slider {
+                    font-weight: bold;
+                  }
+
+                }
+
+                .number {
+                  float: right; //LTR
+                  border-left: 1px dotted #dadada; //LTR
+                  background-color: #f4f4f4;
+                  width: 51px;
+                  text-align: center;
+                  height: 100%;
+                  color: #3b3b3b;
+                  font-size: 21px;
+                  font-weight: bold;
+                }
+
+                &.users-score {
+                  height: 34px;
+                  margin-bottom: 8px;
+
+                  .number div {
+                    margin-top: 6px;
+                  }
+                }
+
+                &.your-score {
+                  height: 48px;
+
+                  .number {
+                    line-height: 48px;
+                  }
+                }
+              }
+            }
+
+            .ribbon {
+              position: absolute;
+              top: 93px;
+              left: 291px; //LTR
+              background: url('../images/ribbon.jpg') no-repeat;
+              width: 11px;
+              height: 11px;
+              z-index: 1000;
+
+              &.first {
+                top: 35px;
+              }
+            }
+
+          }
+
+          .bottom-wrapper {
+            margin-top: 16px;
+
+            .game-image {
+              float: left; //LTR
+              width: 105px;
+
+              img {
+                border: 1px solid #10100e;
+              }
+            }
+
+            .details {
+              float: left; //LTR
+              width: 175px;
+
+              .game-title {
+                font-weight: bold;
+                font-size: 15px;
+                color: #0f0f0f;
+                margin: 0px 0px 12px 7px; //LTR
+              }
+
+              .game-data {
+                color: #777777;
+                font-size: 13px;
+
+                ul li {
+                  list-style-type: none;
+                  margin-left: 7px; //LTR
+                  padding-left: 8px; //LTR
+                  background: url('../images/li-bullet.jpg') no-repeat 0 0.5em;
+
+                  .title {
+                    font-weight: bold;
+                    color: #4e4e4e;
+                  }
+                }
+              }
+            }
+          }
+
+          .buy-game-wrapper {
+            border: 1px solid #d23700;
+            @include rounded-corners(10px, 10px, 10px, 10px);
+            width: 281px;
+            height: 39px;
+            margin-top: 10px;
+
+            .buy-game {
+              @include rounded-corners(10px, 10px, 10px, 10px);
+              @include background-image(linear-gradient(#f97f00, #f55300));
+              @include franklin;
+              border-top: 1px solid #fbb400;
+              color: white;
+              padding: 7px 0px;
+              height: 25px;
+              text-align: center;
+              font-size: 19px;
+              letter-spacing: 1px;
+              text-shadow: -1px -1px #f33600;
+
+              .cart {
+                background: url('../images/sprites.png') no-repeat -250px -50px;
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 10px; //LTR
+              }
+
+              span {
+                display: inline-block;
+              }
+            }
+          }
+        }
+
+        .pane-related-games-panel-pane-related-games {
+
+          .view-id-related_games {
+
+            .views-field-title-field {
+              font-size: 14px;
+            }
+
+            .views-field-field-consoles .item-list {
+              color: #808080;
+              font-size: 13px;
+
+              &:before {
+                content: "(";
+              }
+
+              &:after {
+                content: ")";
+              }
+
+              ul {
+                display: inline;
+                margin: 0px -4px 0px 0px; //LTR
+
+                li {
+                  display: inline;
+                  margin: 0px;
+                  padding: 0px;
+                }
+              }
+            }
+
+            tr.row-first {
+              text-align: center;
+              border-bottom: 1px dotted #e4e4e4;
+
+              td {
+                padding-bottom: 10px;
+              }
+            }
+
+            tr.row-last td {
+               padding-top: 10px;
+            }
+
+            td {
+              width: 50%;
+              padding: 5px;
+              vertical-align: top;
+
+              &.col-first {
+                text-align: center;
+                border-right: 1px dotted #e4e4e4; //LTR
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

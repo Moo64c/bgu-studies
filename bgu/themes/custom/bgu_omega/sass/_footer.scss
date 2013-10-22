@@ -1,0 +1,101 @@
+#footer-first {
+  border-bottom: 1px solid #101010;
+  background: #1c1c1c url('../images/bg-footer-top.png') repeat-x;
+  padding-top: 9px;
+
+  .container {
+    background: url('../images/bg-footer.png') no-repeat;
+    height: 246px;
+    width: 1120px;
+    padding-top: 60px;
+
+    .region-footer-first {
+      width: 960px;
+      margin: 0 auto;
+
+      .block {
+        float: left; //LTR
+        width: 190px;
+        margin-right: 60px; //LTR
+
+        &.last {
+          margin-right: 0; //LTR
+        }
+      }
+
+      h2 {
+        margin: 0;
+        padding-bottom: 4px;
+        color: #b9d46d;
+        text-shadow: 1px 1px 0 #131313;
+        background: url('../images/bg-footer-title.png') repeat-x bottom;
+        @include century;
+        font-size: 24px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style-image: url('../images/bullet-footer.png');
+        float: left; //LTR
+        clear: left; //LTR
+        margin-left: 12px; //LTR
+        margin-top: 6px;
+
+        &.first {
+          margin-top: 10px;
+        }
+
+        a {
+          font-size: 14px;
+          color: white;
+
+          &:hover {
+            color: #b9d36e;
+          }
+        }
+      }
+
+      .block-mailchimp-lists {
+
+        .form-item label {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #block-hirotv-general-hirotv-general-follow-us li {
+    margin-left: 20px; //LTR
+
+    &.facebook {
+      list-style-image: url('../images/bullet-facebook.png');
+    }
+
+    &.rss {
+      list-style-image: url('../images/bullet-rss.png');
+    }
+  }
+}
+
+#footer-last {
+  border-top: 1px solid #282828;
+  background-color: #161616;
+  padding: 9px;
+
+  p {
+    margin: 0;
+    text-align: center;
+    color: #ebebeb;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+#bottom-frame {
+  background: url('../images/bg-footer-bottom.png') repeat-x;
+  height: 12px;
+}

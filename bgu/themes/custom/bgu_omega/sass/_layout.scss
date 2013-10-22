@@ -1,0 +1,65 @@
+@import "mixins";
+
+.front #main .panel-pane-top {
+  margin-bottom: 30px;
+
+  .panel-pane {
+    @include panel-box-cancel;
+    padding: 3px;
+  }
+}
+
+#main {
+
+  .pane-page-elements-panel-pane-page-elements {
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    @include rounded-corners(0, 0, 0, 0);
+
+    .views-row {
+      @include panel-box;
+      margin-bottom: 38px;
+
+      &.last {
+        margin-bottom: 0;
+      }
+
+      &.no-padding {
+        padding: 0;
+      }
+    }
+  }
+}
+
+
+
+#main-content {
+  width: 623px;
+  float: left; //LTR
+}
+
+#mini-panel-sidebar {
+  margin-left: 37px; //LTR
+  width: 300px;
+  float: left; //LTR
+
+  .inside {
+    margin: 0;
+  }
+}
+
+.pane-content iframe {
+  margin: 0 auto;
+}
+
+.panel-panel {
+
+  .panel-separator {
+    margin-bottom: 38px;
+  }
+}
+
+.region-content-last {
+  margin-top: 38px;
+}

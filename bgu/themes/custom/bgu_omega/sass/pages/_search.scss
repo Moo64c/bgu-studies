@@ -1,0 +1,38 @@
+.view-console-videos, .view-video-search {
+
+  li.views-row {
+    float: left; //LTR
+  }
+
+  // Search result.
+  table.views-view-grid {
+
+    td {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .field-content {
+      font-size: 14px;
+
+       a {
+        font-size: 14px; color:#00437C;
+
+        &:hover {
+          color: #7da800;
+        }
+      }
+    }
+  }
+
+  .item-list {
+
+    a {
+      color: #00437C;
+
+      &:hover {
+        color: #7da800;
+      }
+    }
+  }
+}

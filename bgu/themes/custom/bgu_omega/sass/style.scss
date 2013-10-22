@@ -1,0 +1,172 @@
+@import "mixins";
+
+@import "basic_page";
+@import "comments";
+@import "fivestar";
+@import "layout";
+@import "header";
+@import "footer";
+@import "form";
+@import "sidebar";
+@import "slider";
+@import "compass";
+@import "pages/front";
+@import "pages/search";
+@import "pages/video";
+
+body {
+  margin: 0;
+  background: url("../images/bg-body.png");
+  @include arial;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#main {
+  margin-top: 25px;
+  min-height: 500px;
+
+  &.breadcrumbs {
+    margin-top: 18px;
+  }
+
+  article {
+    background-color: white;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: #86b902;
+  }
+}
+
+.item-list ul li {
+  list-style-type: none;
+}
+
+.pane-taxonomy-menu .item-list ul li {
+  float: left; //LTR
+}
+
+.panel-box {
+  @include panel-box;
+}
+
+
+a {
+  color: #00437C;
+
+  &:hover {
+    color: #7da800;
+  }
+}
+
+.pane-title-green h2 {
+  margin: 0 0 0 -26px; //LTR
+  padding-left: 29px; //LTR
+  padding-top: 5px;
+  width: 248px;
+  height: 48px;
+  color: #fffeff;
+  background: url('../images/sprites.png') no-repeat -100px -200px;
+  @include franklin;
+  font-size: 24px;
+}
+
+h3 {
+  color: #00437C;
+  @include franklin;
+  font-size: 18px;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 14px;
+
+  p {
+    display: inline;
+    line-height: 18px;
+  }
+}
+
+
+
+.panel-col {
+  width: 620px;
+
+  .pane-taxonomy-term-video {
+    @include panel-box;
+
+    .panel-separator {
+      margin-bottom: 5px;
+    }
+
+    .panel-pane {
+      box-shadow: 0 0;
+      padding: 0px;
+      float: left; //LTR
+      clear: left; //LTR
+
+      &.pane-node-title-field {
+        @include franklin;
+        color: #0f0f0f;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      &.pane-node-field-subtitle {
+        float: left; //LTR
+        font-size: 18px;
+        @include franklin;
+        color: #6c6c6c;
+      }
+
+
+      &.pane-service-links{
+        margin: 12px 0px 9px;
+      }
+
+      .service-links {
+
+        ul {
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+
+          li {
+            display: block;
+            float: left; //LTR
+
+            &.service-links-facebook-like iframe {
+              width: 91px !important;
+            }
+
+            &.service-links-twitter-widget iframe {
+              width: 90px !important;
+            }
+
+            &.service-links-pinterest-button {
+              width: 54px !important;
+            }
+
+            &.service-links-google-plus-one div {
+              width: 93px !important;
+            }
+          }
+        }
+      }
+
+      &.pane-video-player {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

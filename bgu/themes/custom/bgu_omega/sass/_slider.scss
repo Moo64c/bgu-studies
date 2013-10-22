@@ -1,0 +1,158 @@
+
+
+.gc-carousel-pane {
+  @include panel-box;
+
+  padding: 0;
+  position: relative;
+
+  h2 {
+    background: none;
+    padding: 0;
+    z-index: 10;
+    height: auto;
+    @include slider-header;
+  }
+
+  a {
+    color: #00437C;
+
+    &:hover {
+      color: #7da800;
+    }
+  }
+
+  .view {
+    position: relative;
+    padding: 0;
+
+    .attachment-before h2 {
+      @include slider-header;
+    }
+
+    .jcarousel-container {
+      display: none;
+      padding: 0;
+      width: 513px;
+      height: 170px;
+
+      ul {
+        min-width: 15000px;
+      }
+
+      .jcarousel-clip {
+        padding-top: 43px;
+        height: 127px;
+        width: 513px;
+      }
+
+      a.arrow {
+        @include rounded-corners(10px, 0, 0, 10px);
+        display: block;
+        background: #f9f9f9;
+        top: 0;
+        left: -55px; //LTR
+        border-right: 1px solid #d2d2d2; //LTR
+        height: 100%;
+        padding: 0 12px;
+
+        span {
+          margin-top: 70px;
+          display: inline-block;
+          background: url("../images/sprites.png") no-repeat -50px -100px;
+          width: 30px;
+          height: 30px;
+
+          span {
+            background-position: -300px -25px;
+            width: 10px;
+            height: 13px;
+            margin: 9px auto 0;
+          }
+        }
+
+        &:hover span.circle {
+          background-position: 0 -100px;
+        }
+
+        &.jcarousel-next {
+          left: auto; //LTR
+          right: -55px; //LTR
+          border-right: none; //LTR
+          border-left: 1px solid #d2d2d2; //LTR
+          @include rounded-corners(0, 10px, 10px, 0);
+
+          span.arrow {
+            background-position: -325px -25px;
+          }
+        }
+      }
+
+      .jcarousel-item {
+        position: relative;
+        border: none;
+        margin: 0 25px;
+        height: 128px;
+        width: 120px !important;
+
+        .node-teaser {
+          margin: 0 auto;
+          width: 120px;
+        }
+
+        .views-field-title, .views-field-title-field {
+          margin: 4px 0 0;
+          font-size: 14px;
+          height: 32px;
+          overflow: hidden;
+        }
+
+        a {
+          text-align: left; //LTR
+          width: 120px;
+          height: 67px;
+          display: block;
+
+          &:hover:after {
+            content: url('../images/hover-play.png');
+            padding-top: 20px;
+            padding-left: 45px;
+            background: rgba(27, 27, 27, 0.7);
+            width: 75px;
+            height: 47px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0; //LTR
+          }
+        }
+
+        .views-field-field-launch-date {
+          margin-top: 3px;
+          font-size: 11px;
+          color: #6b6b6b;
+          text-align: left; //LTR
+        }
+
+        .views-field-field-views {
+
+          .field-content {
+            margin-top: 4px;
+            font-size: 12px;
+            text-align: left;
+            color: #999999;
+          }
+        }
+
+        .views-field-created {
+          text-align: left;
+
+          .field-content {
+            font-size: 12px;
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+}

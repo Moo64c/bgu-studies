@@ -1,0 +1,86 @@
+@import "mixins";
+
+#main-content .pane-main-video {
+
+  h2 {
+    margin-bottom: 0;
+
+    a {
+      color: #0f0f0f;
+      font-size: 30px;
+      @include franklin;
+    }
+  }
+
+  .comments-symbol {
+    background: url('../images/sprites.png') -349px 0;
+    width: 12px;
+    height: 10px;
+    display: inline-block;
+  }
+
+  .details {
+    color: #858585;
+    font-size: 12px;
+  }
+
+  .service-links {
+    margin-top: 10px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+        float: left; //LTR
+
+        &.service-links-pinterest-button {
+          margin-right: 20px; //LTR
+        }
+      }
+    }
+  }
+}
+
+#block-hirotv-search-hirotv-search-videos-alter {
+  margin-top: 30px;
+  border: 1px solid black;
+  @include rounded-corners(10px, 10px, 0, 0);
+
+  .content {
+    height: 43px;
+    border: 1px solid #5e5e5e;
+    @include rounded-corners(9px, 9px, 0, 0);
+
+    background: -moz-linear-gradient(top,  rgba(55,55,55,1) 0%, rgba(48,48,48,1) 26%, rgba(30,30,30,1) 76%, rgba(25,25,25,1) 95%, rgba(26,26,26,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(55,55,55,1)), color-stop(26%,rgba(48,48,48,1)), color-stop(76%,rgba(30,30,30,1)), color-stop(95%,rgba(25,25,25,1)), color-stop(100%,rgba(26,26,26,1)));
+    background: -webkit-linear-gradient(top,  rgba(55,55,55,1) 0%,rgba(48,48,48,1) 26%,rgba(30,30,30,1) 76%,rgba(25,25,25,1) 95%,rgba(26,26,26,1) 100%);
+    background: -o-linear-gradient(top,  rgba(55,55,55,1) 0%,rgba(48,48,48,1) 26%,rgba(30,30,30,1) 76%,rgba(25,25,25,1) 95%,rgba(26,26,26,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(55,55,55,1) 0%,rgba(48,48,48,1) 26%,rgba(30,30,30,1) 76%,rgba(25,25,25,1) 95%,rgba(26,26,26,1) 100%);
+    background: linear-gradient(to bottom,  rgba(55,55,55,1) 0%,rgba(48,48,48,1) 26%,rgba(30,30,30,1) 76%,rgba(25,25,25,1) 95%,rgba(26,26,26,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#1a1a1a',GradientType=0 );
+  }
+
+
+  form {
+    margin: 7px auto 0;
+    width: 580px;
+
+    .form-text {
+      width: 530px;
+    }
+
+    .form-submit {
+      top: 8px;
+      right: 6px; //LTR
+    }
+  }
+}
+
+.view-front-question {
+
+  .form-text {
+    width: 300px;
+  }
+}

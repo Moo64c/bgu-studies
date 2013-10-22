@@ -1,0 +1,19 @@
+.node-page {
+
+  h1, h2, h3 {
+    @include franklin;
+  }
+
+  h2, h3 {
+    color: #353535;
+  }
+
+  ul {
+    list-style-image: url('../images/bullet.png');
+    padding-left: 20px; //LTR
+  }
+
+  p, li {
+    color: #5d5d5d;
+  }
+}
