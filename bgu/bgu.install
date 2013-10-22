@@ -9,11 +9,11 @@ function bgu_install() {
 
   // Disable bartik.
   theme_disable(array('bartik'));
-  theme_enable(array('bootstrap'));
+  theme_enable(array('bgu_omega'));
 
   // Set the default theme.
   variable_set('admin_theme', 'seven');
-  variable_set('theme_default', 'bootstrap_subtheme');
+  variable_set('theme_default', 'bgu_omega');
   variable_set('jquery_update_jquery_version', '1.8');
 
   // Set required date API variables.

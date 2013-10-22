@@ -47,7 +47,7 @@ function bgu_install_tasks() {
  * Profile task; Setup blocks.
  */
 function bgu_setup_blocks() {
-  $default_theme = variable_get('theme_default', 'bootstrap_subtheme');
+  $default_theme = variable_get('theme_default', 'bgu_omega');
 
   $blocks[] = array(
     'module' => 'search',
