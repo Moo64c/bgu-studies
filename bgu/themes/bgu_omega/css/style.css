@@ -354,9 +354,9 @@
 /* line 64, ../sass/_header.scss */
 #header-last #logo {
   display: block;
-  width: 281px;
+  width: 149px;
   height: 48px;
-  background: url("../images/sprites.png") no-repeat -50px -150px;
+  background: url("../images/sprites.png") no-repeat -115px -150px;
   float: left;
   margin: 16px 0 0 20px;
 }
@@ -1623,7 +1623,7 @@ a {
 }
 /* line 45, ../sass/style.scss */
 a:hover {
-  color: #86b902;
+  color: #86b903;
 }
 
 /* line 50, ../sass/style.scss */
