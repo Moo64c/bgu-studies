@@ -21,6 +21,16 @@ function bgu_base_wysiwyg_default_profiles() {
       'theme' => 'advanced',
       'language' => 'en',
       'buttons' => array(
+        'default' => array(
+          'justifyleft' => 1,
+          'justifycenter' => 1,
+          'justifyright' => 1,
+          'code' => 1,
+        ),
+        'directionality' => array(
+          'ltr' => 1,
+          'rtl' => 1,
+        ),
         'asciimath' => array(
           'asciimath' => 1,
           'asciimathcharmap' => 1,

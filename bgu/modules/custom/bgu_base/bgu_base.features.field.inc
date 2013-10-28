@@ -457,7 +457,7 @@ function bgu_base_field_default_fields() {
   $fields['node-class-field_defintions'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_defintions',
@@ -523,16 +523,17 @@ function bgu_base_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_defintions',
       'label' => 'Defintions',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'entityreference',
         'settings' => array(
           'match_operator' => 'CONTAINS',
           'path' => '',
-          'size' => 60,
+          'size' => '60',
         ),
         'type' => 'entityreference_autocomplete',
         'weight' => '1',
