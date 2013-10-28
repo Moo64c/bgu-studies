@@ -58,6 +58,8 @@ dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = views_content
 dependencies[] = views_rss
+dependencies[] = wysiwyg
+dependencies[] = wysiwyg_asciimath
 
 ; Features
 dependencies[] = bgu_base

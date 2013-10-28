@@ -9,7 +9,7 @@ projects[admin_views][subdir] = "contrib"
 projects[admin_views][version] = "1.1"
 
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.2"
+projects[ctools][version] = "1.3"
 
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
@@ -21,7 +21,7 @@ projects[diff][subdir] = "contrib"
 projects[diff][version] = "3.2"
 
 projects[entity][subdir] = "contrib"
-projects[entity][version] = "1.0"
+projects[entity][version] = "1.2"
 
 projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.0"
@@ -91,6 +91,22 @@ projects[views_bulk_operations][version] = "3.1"
 projects[views_rss][subdir] = "contrib"
 projects[views_rss][version] = "2.0-rc3"
 
+projects[wysiwyg][subdir] = "contrib"
+projects[wysiwyg][version] = "2.2"
+
+projects[wysiwyg_asciimath][subdir] = "contrib"
+projects[wysiwyg_asciimath][version] = "1.x-dev"
+
+
 ; Themes
 projects[omega][subdir] = "contrib"
 projects[omega][version] = "4.0-alpha4"
+
+; Libraries
+libraries[tinymce][type] = "libraries"
+libraries[tinymce][download][type] = "get"
+libraries[tinymce][download][url] = http://download.moxiecode.com/tinymce/tinymce_3.5.10.zip
+
+libraries[mimetex][type] = "libraries"
+libraries[mimetex][download][type] = "get"
+libraries[mimetex][download][url] = http://www.forkosh.com/mimetex.zip
