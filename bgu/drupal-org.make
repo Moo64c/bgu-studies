@@ -105,7 +105,7 @@ projects[omega][version] = "4.0-alpha4"
 ; Libraries
 libraries[tinymce][type] = "libraries"
 libraries[tinymce][download][type] = "get"
-libraries[tinymce][download][url] = http://download.moxiecode.com/tinymce/tinymce_3.5.10.zip
+libraries[tinymce][download][url] = http://download.moxiecode.com/tinymce/tinymce_3.5.10_jquery.zip
 
 libraries[mimetex][type] = "libraries"
 libraries[mimetex][download][type] = "get"

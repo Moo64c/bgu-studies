@@ -14,3 +14,5 @@ drush mi --all --user=1
 
 sudo chmod -R 777 sites/default/files
 
+cd ../bgu/libraries/mimetex/
+cc -DAA mimetex.c gifsave.c -lm -o mimetex.cgi
