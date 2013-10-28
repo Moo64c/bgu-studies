@@ -1,0 +1,99 @@
+@import "mixins";
+
+#main .panel-pane.pane-node-comments {
+  @include rounded-corners(0, 0, 0, 0);
+  box-shadow: none;
+
+  .comment {
+    border-top: 1px solid #e7e7e7;
+    padding: 20px 0;
+
+    .title {
+      color: #7b7b7b;
+      font-size: 12px;
+
+      .author {
+        color: #00437a;
+        font-size: 16px;
+      }
+    }
+
+    .links li {
+      margin: 0;
+      padding: 0;
+
+      a {
+        color: #7b7b7b;
+        font-size: 12px;
+      }
+
+      &:before {
+        content: "";
+        width: 3px;
+        height: 3px;
+        background-color: #cfcfcf;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+#main .panel-pane.pane-node-comment-form {
+  box-shadow: none;
+  background-color: #f9fbf6;
+  border: 1px solid #edf3e5;
+
+  .pane-title {
+    background: none;
+    color: #4c4c4c;
+  }
+
+  form {
+
+    input.form-text, textarea {
+      @include alter-input();
+    }
+
+    input.form-text {
+      height: 32px;
+    }
+
+    .grippie, fieldset.form-wrapper {
+      display: none;
+    }
+
+    .button-wrapper {
+      @include rounded-corners(14px, 14px, 14px, 14px);
+
+      input {
+        @include rounded-corners(12px, 12px, 12px, 12px);
+        text-shadow: -1px -1px 0 #4F7506;
+      }
+    }
+
+    .form-type-textfield, .form-type-textarea {
+
+      label {
+        display: none;
+      }
+    }
+
+    .form-type-checkbox label {
+      font-size: 12px;
+      color: #535d69;
+    }
+
+    .form-item-mail .description {
+      display: inline;
+      color: #7b7b7b;
+
+      &:before {
+        content: "*";
+        color: #d10000;
+        margin-right: 5px; //LTR
+      }
+    }
+  }
+}

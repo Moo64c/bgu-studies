@@ -30,6 +30,9 @@ projects[entityreference][patch][] = "http://drupal.org/files/1354482-er-user-ro
 projects[features][subdir] = "contrib"
 projects[features][version] = "1.0"
 
+projects[field_collection][subdir] = "contrib"
+projects[field_collection][version] = "1.x-dev"
+
 projects[fontyourface][subdir] = "contrib"
 projects[fontyourface][version] = "2.7"
 
@@ -87,12 +90,6 @@ projects[views_bulk_operations][version] = "3.1"
 
 projects[views_rss][subdir] = "contrib"
 projects[views_rss][version] = "2.0-rc3"
-
-projects[vote_up_down][subdir] = "contrib"
-projects[vote_up_down][version] = "1.0-alpha1"
-
-projects[votingapi][subdir] = "contrib"
-projects[votingapi][version] = "2.10"
 
 ; Themes
 projects[omega][subdir] = "contrib"

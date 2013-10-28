@@ -57,7 +57,6 @@ dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = views_content
 dependencies[] = views_rss
-dependencies[] = webform
-dependencies[] = widget_services
 
 ; Features
+dependencies[] = bgu_base

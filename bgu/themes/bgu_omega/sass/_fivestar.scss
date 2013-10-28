@@ -1,0 +1,76 @@
+#fivestar-custom-widget {
+  background: url('../images/sprites.png') no-repeat -150px -100px;
+  width: 123px;
+  height: 11px;
+
+  select {
+    display: none;
+  }
+
+  .button-wrapper {
+    display: none;
+  }
+
+  .form-type-fivestar {
+    position: relative;
+
+    .cancel {
+      display: none;
+    }
+
+    .ajax-progress-throbber {
+      position: absolute;
+      top: 10px;
+
+      .message {
+        display: none;
+      }
+    }
+
+    .star {
+      background: none;
+      height: 11px;
+      width: 12px;
+      text-indent: 0;
+      position: relative;
+
+      a {
+        background: none;
+        color: transparent;
+        display: block;
+        background-position: 0% 0%;
+
+        &:hover {
+          color: transparent;
+        }
+      }
+
+      &.on, &.hover {
+        background: url('../images/slider-active-bg.png') repeat-x;
+      }
+
+      &.star-first.on, &.star-first.hover {
+        background: url('../images/slider-first-active.png') no-repeat;
+      }
+
+      &.selected {
+
+        a:after {
+          content: '';
+          background: url('../images/sprites.png') no-repeat -200px 0;
+          position: absolute;
+          display: block;
+          width: 13px;
+          height: 13px;
+          top: -1px;
+          left: 0; //LTR
+        }
+      }
+
+      &.star-last.on, &.star-last.hover {
+        width: 15px;
+        background: url('../images/slider-last-active.png') no-repeat;
+      }
+    }
+  }
+}

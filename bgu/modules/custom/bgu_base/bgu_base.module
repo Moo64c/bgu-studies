@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Bgu base feature.
+ */
+
+include_once 'bgu_base.features.inc';
