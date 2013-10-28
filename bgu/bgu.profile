@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * BGU profile.
+ * bgu profile.
  */
 
 /**
@@ -20,23 +20,8 @@ function bgu_form_install_configure_form_alter(&$form, $form_state) {
 function bgu_install_tasks() {
   $tasks = array();
 
-  $tasks['bgu_setup_menus'] = array(
-    'display_name' => st('Create menu items'),
-    'display' => FALSE,
-  );
-
   $tasks['bgu_setup_blocks'] = array(
     'display_name' => st('Setup Blocks'),
-    'display' => FALSE,
-  );
-
-  $tasks['bgu_settings'] = array(
-    'display_name' => st('Set various settings'),
-    'display' => FALSE,
-  );
-
-  $tasks['bgu_setup_languages'] = array(
-    'display_name' => st('Setup languages'),
     'display' => FALSE,
   );
 
@@ -44,33 +29,68 @@ function bgu_install_tasks() {
 }
 
 /**
- * Profile task; Setup blocks.
+ * Task callback; Setup blocks.
  */
 function bgu_setup_blocks() {
   $default_theme = variable_get('theme_default', 'bgu_omega');
 
   $blocks[] = array(
-    'module' => 'search',
-    'delta' => 'form',
+    'module' => 'panels_mini',
+    'delta' => 'categories',
     'theme' => $default_theme,
-    'status' => TRUE,
+    'status' => 1,
     'weight' => 0,
-    'region' => 'navigation',
+    'region' => 'header_first',
     'visibility' => 0,
-    'pages' => '',
     'title' => '<none>',
     'cache' => DRUPAL_NO_CACHE,
   );
 
   $blocks[] = array(
     'module' => 'panels_mini',
-    'delta' => 'footer',
+    'delta' => 'consoles',
     'theme' => $default_theme,
-    'status' => TRUE,
+    'status' => 1,
     'weight' => 0,
-    'region' => 'footer',
+    'region' => 'header_last',
     'visibility' => 0,
-    'pages' => '',
+    'title' => '<none>',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  $blocks[] = array(
+    'module' => 'panels_mini',
+    'delta' => 'footer_categories',
+    'theme' => $default_theme,
+    'status' => 1,
+    'weight' => 0,
+    'region' => 'footer_first',
+    'visibility' => 0,
+    'title' => '',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  $blocks[] = array(
+    'module' => 'mailchimp_lists',
+    // @TODO: Change to real list.
+    'delta' => $mail_list = variable_get('mailchimp_newletter_list', 'newsletter'),
+    'theme' => $default_theme,
+    'status' => 1,
+    'weight' => 3,
+    'region' => 'footer_first',
+    'visibility' => 0,
+    'title' => '',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  $blocks[] = array(
+    'module' => 'panels_mini',
+    'delta' => 'bottom',
+    'theme' => $default_theme,
+    'status' => 1,
+    'weight' => 0,
+    'region' => 'footer_last',
+    'visibility' => 0,
     'title' => '<none>',
     'cache' => DRUPAL_NO_CACHE,
   );
@@ -78,66 +98,14 @@ function bgu_setup_blocks() {
   drupal_static_reset();
   _block_rehash($default_theme);
   foreach ($blocks as $record) {
-    db_merge('block')
+    $module = array_shift($record);
+    $delta = array_shift($record);
+    $theme = array_shift($record);
+    db_update('block')
       ->fields($record)
-      ->condition('module', $record['module'])
-      ->condition('delta', $record['delta'])
-      ->condition('theme', $record['theme'])
+      ->condition('module', $module)
+      ->condition('delta', $delta)
+      ->condition('theme', $theme)
       ->execute();
   }
-}
-
-/**
- * Profile task; create menu links.
- */
-function bgu_setup_menus() {
-
-  // Main menu.
-  $item = array(
-    'link_title' => 'Home',
-    'link_path' => '<front>',
-    'menu_name' => 'main-menu',
-    'weight' => -100,
-  );
-  menu_link_save($item);
-}
-
-/**
- * Profile task; Set various settings.
- */
-function bgu_settings() {
-  $variables = array(
-
-    // Search settings.
-    'search_active_modules' => array('apachesolr_search' => 'apachesolr_search'),
-    'search_default_module' => 'apachesolr_search',
-  );
-
-  foreach ($variables as $variable => $value) {
-    variable_set($variable, $value);
-  }
-}
-
-/**
- * Task callback; Setup languages.
- */
-function bgu_setup_languages() {
-  locale_add_language('id');
-
-  $language_negotiation = array(
-    'locale-url' => array(
-      'callbacks' => array(
-        'language' => 'locale_language_from_url',
-        'switcher' => 'locale_language_switcher_url',
-        'url_rewrite' => 'locale_language_url_rewrite_url',
-      ),
-      'file' => 'includes/locale.inc',
-    ),
-    'language-default' => array(
-      'callbacks' => array(
-        'language' => 'language_from_default',
-      ),
-    ),
-  );
-  variable_set('language_negotiation_language', $language_negotiation);
 }

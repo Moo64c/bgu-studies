@@ -9,12 +9,20 @@ function bgu_install() {
 
   // Disable bartik.
   theme_disable(array('bartik'));
-  theme_enable(array('bgu_omega'));
+
+  // Enable our theme.
+  theme_enable(array('omega', 'bgu_omega'));
 
   // Set the default theme.
-  variable_set('admin_theme', 'seven');
   variable_set('theme_default', 'bgu_omega');
-  variable_set('jquery_update_jquery_version', '1.8');
+  variable_set('admin_theme', 'seven');
+
+  // Disable omega devel.
+  $settings = variable_get('theme_bgu_omega_settings');
+  $settings['omega_toggle_extension_layouts'] = FALSE;
+  $settings['omega_toggle_extension_development'] = FALSE;
+  $settings['omega_dummy_blocks'] = FALSE;
+  variable_set('theme_bgu_omega_settings', $settings);
 
   // Set required date API variables.
   // See date_api_status().
@@ -27,9 +35,8 @@ function bgu_install() {
 
   // Enable node view page override by Page manager module.
   variable_set('page_manager_node_view_disabled', FALSE);
-  variable_set('page_manager_term_view_disabled', FALSE);
 
-  variable_set('site_frontpage', 'homepage');
+  variable_set('site_frontpage', 'front');
 
   module_disable(array('overlay', 'toolbar'));
 }
@@ -198,7 +205,7 @@ function bgu_standard_install() {
   variable_set('user_picture_style', 'thumbnail');
 
   // Allow visitor account creation with administrative approval.
-  variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
+  variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
 
   // Create a default vocabulary named "Tags", enabled for the 'article' content type.
   $description = st('Use tags to group articles on similar topics into categories.');
@@ -323,7 +330,6 @@ function bgu_standard_install() {
     'access comments',
     'post comments',
     'skip comment approval',
-    'search content'
   );
 
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, $permissions);
@@ -334,7 +340,6 @@ function bgu_standard_install() {
     'access comments',
     'post comments',
     'skip comment approval',
-    'search content',
     filter_permission_name($filtered_html_format),
   );
 

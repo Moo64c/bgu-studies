@@ -19,7 +19,7 @@ set -xe
   else
     mkdir -p www/sites/default
   fi
-  sudo chmod +w www/sites/* || true
+  chmod +w www/sites/* || true
   rm -Rf www || true
 
   # Build core.

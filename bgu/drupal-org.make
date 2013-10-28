@@ -6,19 +6,10 @@ projects[admin_menu][subdir] = "contrib"
 projects[admin_menu][version] = "3.0-rc4"
 
 projects[admin_views][subdir] = "contrib"
-projects[admin_views][version] = "1.2"
-
-projects[apachesolr][subdir] = "contrib"
-projects[apachesolr][version] = "1.2"
-
-projects[apachesolr_views][subdir] = "contrib"
-projects[apachesolr_views][version] = "1.0-beta2"
-
-projects[ckeditor][subdir] = "contrib"
-projects[ckeditor][version] = "1.13"
+projects[admin_views][version] = "1.1"
 
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.3"
+projects[ctools][version] = "1.2"
 
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
@@ -30,29 +21,24 @@ projects[diff][subdir] = "contrib"
 projects[diff][version] = "3.2"
 
 projects[entity][subdir] = "contrib"
-projects[entity][version] = "1.1"
+projects[entity][version] = "1.0"
 
 projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.0"
-projects[entityreference][patch][] = "https://drupal.org/files/1354482-er-user-roles-23.patch"
+projects[entityreference][patch][] = "http://drupal.org/files/1354482-er-user-roles-19.patch"
 
 projects[features][subdir] = "contrib"
 projects[features][version] = "1.0"
 
-projects[feeds][subdir] = "contrib"
-projects[feeds][version] = "2.0-alpha8"
+projects[fontyourface][subdir] = "contrib"
+projects[fontyourface][version] = "2.7"
 
-projects[feeds_xpathparser][subdir] = "contrib"
-projects[feeds_xpathparser][version] = "1.0-beta4"
-
-projects[jquery_update][subdir] = "contrib"
-projects[jquery_update][version] = "2.3"
+projects[jcarousel][subdir] = "contrib"
+projects[jcarousel][version] = "2.6"
+projects[jcarousel][patch][] = http://drupal.org/files/jcarousel-fix_FOUC-1681538-5.patch
 
 projects[libraries][subdir] = "contrib"
-projects[libraries][version] = "2.1"
-
-projects[metatag][subdir] = "contrib"
-projects[metatag][version] = "1.0-beta7"
+projects[libraries][version] = "2.0"
 
 projects[migrate][subdir] = "contrib"
 projects[migrate][version] = "2.5"
@@ -63,41 +49,51 @@ projects[migrate_extras][version] = "2.5"
 projects[module_filter][subdir] = "contrib"
 projects[module_filter][version] = 1.7
 
+projects[nodequeue][subdir] = "contrib"
+projects[nodequeue][version] = "2.0-beta1"
+
 projects[oauth][subdir] = "contrib"
 projects[oauth][version] = "3.1"
 
 projects[panels][subdir] = "contrib"
 projects[panels][version] = "3.3"
 
-projects[pathauto][subdir] = "contrib"
-projects[pathauto][version] = "1.2"
+projects[search_api_db][subdir] = "contrib"
+projects[search_api_db][version] = "1.0-beta4"
+projects[search_api_db][patch][] = "http://drupal.org/files/search_api_db-revert-exportables-temporary-fix-1414078-10.patch"
+projects[search_api_db][patch][] = "http://drupal.org/files/fix-indexing-of-removed-fields-1346846-16.patch"
+projects[search_api_db][patch][] = "http://drupal.org/files/search_api_db-unknown_column_value-1805640-9.patch"
+
+projects[search_api][subdir] = "contrib"
+projects[search_api][version] = "1.4"
+
+projects[search_api_solr][subdir] = "contrib"
+projects[search_api_solr][version] = "1.0-beta4"
+
+projects[service_links][subdir] = "contrib"
+projects[service_links][version] = "2.x-dev"
 
 projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
 
 projects[title][subdir] = "contrib"
-projects[title][version] = "1.0-alpha7"
-
-projects[token][subdir] = "contrib"
-projects[token][version] = "1.5"
+projects[title][version] = "1.x-dev"
 
 projects[views][subdir] = "contrib"
-projects[views][version] = "3.7"
+projects[views][version] = "3.6"
 
 projects[views_bulk_operations][subdir] = "contrib"
 projects[views_bulk_operations][version] = "3.1"
 
-projects[views_infinite_scroll][subdir] = "contrib"
-projects[views_infinite_scroll][version] = "1.1"
-
 projects[views_rss][subdir] = "contrib"
 projects[views_rss][version] = "2.0-rc3"
 
-; Libraries.
-libraries[autopager][type] = "libraries"
-libraries[autopager][download][type] = "get"
-libraries[autopager][download][url] = "http://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js"
+projects[vote_up_down][subdir] = "contrib"
+projects[vote_up_down][version] = "1.0-alpha1"
 
-libraries[ckeditor][type] = "libraries"
-libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.2.1/ckeditor_4.2.1_full.zip"
+projects[votingapi][subdir] = "contrib"
+projects[votingapi][version] = "2.10"
+
+; Themes
+projects[omega][subdir] = "contrib"
+projects[omega][version] = "4.0-alpha4"
