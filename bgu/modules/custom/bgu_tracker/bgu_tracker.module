@@ -15,5 +15,5 @@ function bgu_tracker_cron() {
 }
 
 function bgu_tracker_check_node($nid) {
-  
+
 }

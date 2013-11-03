@@ -64,3 +64,4 @@ dependencies[] = wysiwyg_asciimath
 
 ; Features
 dependencies[] = bgu_base
+dependencies[] = bgu_tracker
