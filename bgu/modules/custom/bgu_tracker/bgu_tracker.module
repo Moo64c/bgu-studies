@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the BGU tracker feature.
+ */
+
+include_once 'bgu_tracker.features.inc';
