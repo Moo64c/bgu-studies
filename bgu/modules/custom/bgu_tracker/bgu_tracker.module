@@ -5,3 +5,15 @@
  */
 
 include_once 'bgu_tracker.features.inc';
+
+
+/**
+ * Implement hook_cron().
+ */
+function bgu_tracker_cron() {
+  // Run tracker update.
+}
+
+function bgu_tracker_check_node($nid) {
+  
+}

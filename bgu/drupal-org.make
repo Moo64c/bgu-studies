@@ -30,6 +30,9 @@ projects[entityreference][patch][] = "http://drupal.org/files/1354482-er-user-ro
 projects[features][subdir] = "contrib"
 projects[features][version] = "1.0"
 
+projects[feeds][subdir] = "contrib"
+projects[feeds][version] = "2.0-alpha8"
+
 projects[field_collection][subdir] = "contrib"
 projects[field_collection][version] = "1.x-dev"
 

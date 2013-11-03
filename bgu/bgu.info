@@ -35,6 +35,7 @@ dependencies[] = diff
 dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
+dependencies[] = feeds
 dependencies[] = field_collection
 dependencies[] = fontyourface
 dependencies[] = jcarousel
