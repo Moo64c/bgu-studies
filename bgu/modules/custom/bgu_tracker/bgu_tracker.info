@@ -1,6 +1,6 @@
 name = BGU tracker
 core = 7.x
-package = Features
+package = bgu
 version = 7.x-1.0
 project = bgu_tracker
 dependencies[] = ctools
